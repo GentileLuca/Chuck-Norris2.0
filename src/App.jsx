@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './styles/App.css'
 
 
-//import Button from './components/button'
-import EditorialContent from './components/EditorialContent'
+import Button from './component/Button'
+import EditorialContent from './component/EditorialContent'
 
 
 
@@ -24,6 +24,7 @@ function App() {
         title="Webapp API Chuck Norris"
         content="Design di una pagina che utilizza la API di chucknorris.io per generare alla pressione di un pulsante una battuta del tipo che selezioni nel menu a tendina qui sotto."
       />
+
 {
   /*{ joke !== "" &&
         <div id="joke">{joke}</div>
