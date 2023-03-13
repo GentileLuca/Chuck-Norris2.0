@@ -25,6 +25,15 @@ function App() {
         content="Design di una pagina che utilizza la API di chucknorris.io per generare alla pressione di un pulsante una battuta del tipo che selezioni nel menu a tendina qui sotto."
       />
 
+      <Button
+        content="Carica il joke"
+        variant="primary"
+      />
+
+      <Button
+        content="Copia il testo"
+        variant="copy"
+      />
 {
   /*{ joke !== "" &&
         <div id="joke">{joke}</div>
