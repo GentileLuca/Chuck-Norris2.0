@@ -5,6 +5,7 @@ import './styles/App.css'
 import Button from './component/Button'
 import EditorialContent from './component/EditorialContent'
 import Dropdown from './component/Dropdown'
+import Casellajoke from './component/Casellajoke'
 
 
 
@@ -30,6 +31,9 @@ function App() {
 
       <Dropdown
 
+      />
+
+      <Casellajoke
       />
       <Button
         content="Carica il joke"
