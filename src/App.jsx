@@ -25,6 +25,8 @@ function App() {
         content="Design di una pagina che utilizza la API di chucknorris.io per generare alla pressione di un pulsante una battuta del tipo che selezioni nel menu a tendina qui sotto."
       />
 
+      <img src="../public/img/chuck.png" alt="immagine di Chuck"  className='chuck'/>
+
       <Button
         content="Carica il joke"
         variant="primary"
