@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import '../styles/casellajoke.css'
 
-function Casellajoke(){
+function Casellajoke({content}){
   return (
     <div className="casella">
             <p>
-              Chuck Norris can divide by zero.
-              Chuck Norris can divide by zero.
-              Chuck Norris can divide by zero.
-              Chuck Norris can divide by zero. 
+              {content}
             </p>
     </div>
   )

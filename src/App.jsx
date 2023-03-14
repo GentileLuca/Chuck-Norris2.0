@@ -10,12 +10,15 @@ import Casellajoke from './component/Casellajoke'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [joke, setJoke] = useState(0)
-  
+  const [joke, setJoke] = useState("")
 
-  function ue(){
-    console.log("Hello World")
+  function getJoke(){
+    fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then(data => {
+      setJoke(data.value)
+      console.log(data.value)
+    })
   }
 
 
@@ -34,10 +37,13 @@ function App() {
       />
 
       <Casellajoke
+        content={joke}
       />
+      
       <Button
         content="Carica il joke"
         variant="primary"
+        clkb={() => getJoke()}
       />
 
       <Button
@@ -48,24 +54,7 @@ function App() {
   /*{ joke !== "" &&
         <div id="joke">{joke}</div>
 
-      }
-      <Button 
-      content="Carica il joke"
-      variant="dark"
-      clbk = {loadJoke}    
-      />
-
-      <Button 
-      content="Copia il testo"
-      variant={joke === "" ? "disabled" : ""}
-      clbk = {copyText}
-      />
-
-       <Button 
-      content="Copia il testo"
-      variant="disabled"
-      clbk = {copyText}
-      />*/
+      }*/
 } 
     
     </div>
