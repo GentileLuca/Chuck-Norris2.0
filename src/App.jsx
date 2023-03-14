@@ -10,7 +10,7 @@ import Casellajoke from './component/Casellajoke'
 
 
 function App() {
-  const [joke, setJoke] = useState("")
+  const [joke, setJoke] = useState("Clicca il bottone per caricare il joke")
 
   function getJoke(){
     fetch('https://api.chucknorris.io/jokes/random')
@@ -20,6 +20,8 @@ function App() {
       console.log(data.value)
     })
   }
+
+
 
 
   return (
@@ -33,7 +35,6 @@ function App() {
       <img src="../public/img/chuck.png" alt="immagine di Chuck"  className='chuck'/>
 
       <Dropdown
-
       />
 
       <Casellajoke
