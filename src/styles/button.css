@@ -18,3 +18,15 @@
 button{
     margin-bottom: 3%;
 }
+
+@media (min-width:768px) {
+    .primary{
+        padding: 8px 50px;
+        font-size: 10px;
+    }
+    
+    .primary{
+        padding: 8px 50px;
+        font-size: 10px;
+    }
+}

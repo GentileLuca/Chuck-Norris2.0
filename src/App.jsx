@@ -39,7 +39,6 @@ function App() {
       <Casellajoke
         content={joke}
       />
-      
       <Button
         content="Carica il joke"
         variant="primary"
