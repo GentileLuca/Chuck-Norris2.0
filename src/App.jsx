@@ -4,6 +4,7 @@ import './styles/App.css'
 
 import Button from './component/Button'
 import EditorialContent from './component/EditorialContent'
+import Dropdown from './component/Dropdown'
 
 
 
@@ -27,6 +28,9 @@ function App() {
 
       <img src="../public/img/chuck.png" alt="immagine di Chuck"  className='chuck'/>
 
+      <Dropdown
+
+      />
       <Button
         content="Carica il joke"
         variant="primary"
