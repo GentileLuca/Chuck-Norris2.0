@@ -19,15 +19,13 @@ button{
     margin-bottom: 3%;
 }
 
-/*
-@media (min-width:768px) {
+/*responsive*/
+@media (max-width: 768px) {
     .primary{
-        padding: 8px 50px;
-        font-size: 10px;
+        padding: 16px 50px;
+        font-size: 20px;
     }
-    
-    .primary{
-        padding: 8px 50px;
-        font-size: 10px;
+    .copy{
+        padding: 16px 50px;
     }
-}*/
+}

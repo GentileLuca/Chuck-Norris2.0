@@ -9,6 +9,16 @@
     text-align: center;
 }
 
+/*responsive per mobile*/
+
+@media (max-width: 768px) {
+    .selector{
+        width: 100%;
+        font-size: 25px;
+        height: 40px;
+    }
+}
+
 
 
 

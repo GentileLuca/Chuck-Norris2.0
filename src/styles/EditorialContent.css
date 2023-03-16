@@ -4,6 +4,21 @@
 }
 
 .EditorialContent h1{
+    font-size: 50px;
     margin-top: 4%;
     margin-bottom: 4%;
+}
+
+.EditorialContent p{
+    font-size: 25px;
+    margin-bottom: 4%;
+ }
+/*mobile*/
+@media (max-width: 768px) {
+    .EditorialContent h1{
+        font-size: 30px;
+    }
+    .EditorialContent p{
+        font-size: 16px;
+     }
 }
