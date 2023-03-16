@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/App.css'
 
 
@@ -11,16 +11,41 @@ import Casellajoke from './component/Casellajoke'
 
 function App() {
   const [joke, setJoke] = useState("Clicca il bottone per caricare il joke")
+  const [categorySelected, setCategorySelected] = useState("")
   
 
-  function getJoke(){
+  /*function getJoke(){
     fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
     .then(data => {
       setJoke(data.value)
       console.log(data.value)
     })
+  }*/
+
+  function setCategories(c){
+    setCategorySelected(c)
   }
+
+  function getCustomJoke(c){
+    fetch(`https://api.chucknorris.io/jokes/random?category=${categorySelected}`)
+    .then(response => response.json())
+    .then(data => {
+      setJoke(data.value)
+    })
+  }
+
+  function returnCustomJoke(categorySelected){
+    if(categorySelected !== ""){
+      console.log(categorySelected)
+      getCustomJoke(categorySelected)
+    }else{
+      console.log("Non funziona")
+      alert("Selezionare una categoria");
+    }
+  }
+
+
 
   //funzione copia
   function copyToClipboard(text) {
@@ -54,6 +79,7 @@ function App() {
       <img src="../public/img/chuck.png" alt="immagine di Chuck"  className='chuck'/>
 
       <Dropdown
+        clbk={(c) => setCategories(c)}
       />
 
       <Casellajoke
@@ -62,21 +88,14 @@ function App() {
       <Button
         content="Carica il joke"
         variant="primary"
-        clkb={() => getJoke()}
+        clkb={() => returnCustomJoke(categorySelected)}
       />
 
       <Button
         content="Copia il testo"
         variant="copy"
         clkb={() => copyToClipboard(joke)}
-      />
-{
-  /*{ joke !== "" &&
-        <div id="joke">{joke}</div>
-
-      }*/
-} 
-    
+      />    
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import '../styles/dropdown.css'
 
-function Dropdown(){
+function Dropdown({clbk}){
   const [categories, setCategories] = useState([])
-  const [categorySelected, setCategorySelected] = useState("")
+
 
 function getCategoriJoke(){
     fetch('https://api.chucknorris.io/jokes/categories')
@@ -16,19 +16,12 @@ function getCategoriJoke(){
   useEffect (() => getCategoriJoke(), [])
 
   function myFunction(e){
-    //console.log("valore settat0 -- > ",e.target.value)
-    setCategorySelected(e.target.value.toString())
-    console.log("categorySelected= ", categorySelected); //prende il valore precedente
-
+    clbk(e.target.value.toString())
   }
-
- /* useEffect(() => {
-    console.log("categorySelected= ", categorySelected);
-  }, [categorySelected]);*/
-
 
   return (
       <select className='selector' onChange={(e) => myFunction(e)}>
+         <option value="" selected></option>
         {categories.map((category, index) => (
           <option key={index} value={category}>{category}</option>
         ))}
