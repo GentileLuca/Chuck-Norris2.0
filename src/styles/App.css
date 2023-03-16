@@ -1,7 +1,18 @@
+@font-face {
+  font-family: 'pageFont';
+  src: url(../assets/fonts/pageFont.ttf);
+}
+
+@font-face {
+  font-family: 'jokeFont';
+  src: url(../assets/fonts/jokeFont.ttf);
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'pageFont';
 }
 
 #root{
@@ -12,12 +23,11 @@
 }
 
 .App{
-  width:69%;
+  width:100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
   align-items: center;
-  /*background-color: #d5ddbc;*/
 }
 
 .chuck{
