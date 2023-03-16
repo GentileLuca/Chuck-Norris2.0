@@ -11,6 +11,7 @@ import Casellajoke from './component/Casellajoke'
 
 function App() {
   const [joke, setJoke] = useState("Clicca il bottone per caricare il joke")
+  
 
   function getJoke(){
     fetch('https://api.chucknorris.io/jokes/random')
@@ -21,8 +22,26 @@ function App() {
     })
   }
 
-
-
+  //funzione copia
+  function copyToClipboard(text) {
+    // Crea un'area di testo nascosta per copiare il testo all'interno
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+  
+    // Seleziona il testo nell'area di testo
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+  
+    // Copia il testo negli Appunti
+    document.execCommand('copy');
+  
+    // Rimuove l'area di testo nascosta
+    document.body.removeChild(textarea);
+  }
 
   return (
     <div className="App">
@@ -49,6 +68,7 @@ function App() {
       <Button
         content="Copia il testo"
         variant="copy"
+        clkb={() => copyToClipboard(joke)}
       />
 {
   /*{ joke !== "" &&
