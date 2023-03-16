@@ -3,8 +3,7 @@ import '../styles/dropdown.css'
 
 function Dropdown(){
   const [categories, setCategories] = useState([])
-  const [categorySelected, setCategorySelected] = useState()
-  const [open, setOpen] = useState(false)
+  const [categorySelected, setCategorySelected] = useState("")
 
 function getCategoriJoke(){
     fetch('https://api.chucknorris.io/jokes/categories')
@@ -14,24 +13,27 @@ function getCategoriJoke(){
       })
   }
 
-  function myFunction(category){
-    setCategorySelected(category.category)
-    console.log("cazzpme")
+  useEffect (() => getCategoriJoke(), [])
+
+  function myFunction(e){
+    //console.log("valore settat0 -- > ",e.target.value)
+    setCategorySelected(e.target.value.toString())
+    console.log("categorySelected= ", categorySelected); //prende il valore precedente
+
   }
 
-  useEffect (() => getCategoriJoke(), [])
+ /* useEffect(() => {
+    console.log("categorySelected= ", categorySelected);
+  }, [categorySelected]);*/
 
 
   return (
-    <div className="category">
-      <div onClick={}>
-        <p className='selector'>Select a category</p>
-        <p className='freccia'>↓</p>
-      </div>
-
-    </div>
-
-  )
+      <select className='selector' onChange={(e) => myFunction(e)}>
+        {categories.map((category, index) => (
+          <option key={index} value={category}>{category}</option>
+        ))}
+      </select>
+    )
   
   
 }

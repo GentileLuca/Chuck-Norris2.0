@@ -3,18 +3,9 @@
     padding: 2% 35%;
     font-size: 20px;
     color: #000;
-    background: white;
+    background: #937B63;
     margin-bottom: 3%;
     font-weight: bold;
 }
 
-.category div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
 
-.freccia{
-    display: flex;
-}
