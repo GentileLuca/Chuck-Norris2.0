@@ -8,9 +8,15 @@
   src: url(../assets/fonts/jokeFont.ttf);
 }
 
+.chuck{
+  margin: 3.5% 0;
+}
+
+
 /*mobile*/
 @media (max-width: 768px) {
   .chuckImg{
     display: none;
   }
 }
+

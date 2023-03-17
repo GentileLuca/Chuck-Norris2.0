@@ -15,14 +15,30 @@
 
 .App{
   width:50%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 
-.chuck{
-  margin: 3.5% 0;
+/*responsive*/
+@media (min-width: 768px) {
+  .App{
+    justify-content: space-between;
+  }
 }
+
+@media (max-height: 850px) {
+  #root{
+    height: 150vh;
+  }
+}
+
+/*mobile*/
+@media (max-width: 768px) {
+  .App{
+    width: 80%;
+  }
+}
+
 

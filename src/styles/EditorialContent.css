@@ -15,10 +15,10 @@
  }
 /*mobile*/
 @media (max-width: 768px) {
-    .EditorialContent h1{
-        font-size: 30px;
-    }
+    .EditorialContent{
+        margin: 10% 0 15% 0;
+     }
     .EditorialContent p{
-        font-size: 16px;
+        font-size: 20px;
      }
 }
