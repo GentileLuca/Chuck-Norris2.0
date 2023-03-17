@@ -36,14 +36,14 @@ function App() {
   }
 
   function returnCustomJoke(categorySelected){
-    if(categorySelected !== ""){
+    if(categorySelected === "random" || categorySelected === ""){
+      getJoke()
+    }else{
       console.log(categorySelected)
       getCustomJoke(categorySelected)
-    }else{
-      console.log("random")
-      getJoke();
     }
   }
+
 
 
 
