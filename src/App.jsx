@@ -19,7 +19,7 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setJoke(data.value)
-      console.log(data.value)
+      //console.log(data.value)
     })
   }
 
@@ -39,7 +39,7 @@ function App() {
     if(categorySelected === "random" || categorySelected === ""){
       getJoke()
     }else{
-      console.log(categorySelected)
+      //console.log(categorySelected)
       getCustomJoke(categorySelected)
     }
   }
