@@ -21,7 +21,7 @@ function getCategoriJoke(){
 
   return (
       <select className='selector' onChange={(e) => myFunction(e)}>
-         <option value="random" selected>Random</option>
+         <option value="random">Random</option>
         {categories.map((category, index) => (
           <option key={index} value={category}>{category}</option>
         ))}
